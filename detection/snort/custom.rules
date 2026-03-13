@@ -1,0 +1,40 @@
+# Custom Snort Rules (Lab Environment)
+
+# These rules are used to detect suspicious HTTP requests
+# generated during the attack simulation phase of the lab.
+
+# -------------------------------------------------------
+# Rule 1: Detect SQL keyword in URI (possible SQL injection)
+# -------------------------------------------------------
+
+alert tcp any any -> $HOME_NET 80 \
+(msg:"LAB SQLi attempt - SQL keyword detected"; \
+content:"SELECT"; http_uri; nocase; \
+sid:1000001; rev:1;)
+
+# -------------------------------------------------------
+# Rule 2: Detect UNION keyword used in SQL injection
+# -------------------------------------------------------
+
+alert tcp any any -> $HOME_NET 80 \
+(msg:"LAB SQLi attempt - UNION keyword"; \
+content:"UNION"; http_uri; nocase; \
+sid:1000002; rev:1;)
+
+# -------------------------------------------------------
+# Rule 3: Detect suspicious SQL meta characters
+# -------------------------------------------------------
+
+alert tcp any any -> $HOME_NET 80 \
+(msg:"LAB SQLi pattern - OR 1=1"; \
+pcre:"/(\%27)|(')(\s)*or(\s)*1=1/i"; http_uri; \
+sid:1000003; rev:1;)
+
+# -------------------------------------------------------
+# Rule 4: Detect excessive login attempts
+# -------------------------------------------------------
+
+alert tcp any any -> $HOME_NET 80 \
+(msg:"LAB Possible brute-force login attempt"; \
+content:"login"; http_uri; nocase; \
+sid:1000004; rev:1;)

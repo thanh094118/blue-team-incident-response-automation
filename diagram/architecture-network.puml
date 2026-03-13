@@ -1,0 +1,35 @@
+@startuml
+title <size:18>SOC Detection & Incident Response Lab</size>
+
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+' Màu sắc dark mode
+skinparam backgroundColor #1E1E1E
+skinparam defaultFontColor #FFFFFF
+skinparam arrowColor #00FF00
+skinparam rectangleBackgroundColor #333333
+skinparam rectangleBorderColor #666666
+skinparam defaultTextAlignment center
+
+' Sử dụng layout top to bottom để kiểm soát vị trí tốt hơn
+top to bottom direction
+
+' Các thành phần với font size 14
+rectangle "<size:14>Kali Linux\nAttack Host</size>" as kali
+rectangle "<size:14>pfSense Firewall\nNetwork Gateway</size>" as fw
+rectangle "<size:14>Target Server\nDVWA / Test Services</size>" as target
+rectangle "<size:14>Snort IDS\nNetwork Intrusion Detection</size>" as ids
+rectangle "<size:14>Splunk SIEM\nLog Analysis & Investigation</size>" as siem
+
+' Kết nối chính với font size 10
+kali --> fw : "<size:10>scanning / web attacks</size>"
+fw --> target : "<size:10>filter traffic</size>"
+
+' Đặt Splunk ở dưới cùng bằng cách tạo layout có chủ đích
+target --> ids : "<size:10>network traffic"
+target --> siem : "<size:10>server logs"
+fw --> siem : "<size:10>firewall logs"
+ids --> siem : "<size:10>IDS alerts"
+
+@enduml
