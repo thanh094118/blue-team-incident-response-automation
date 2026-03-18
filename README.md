@@ -27,7 +27,8 @@ Security investigation workflow:
 - Forward **pfSense syslog** and correlate events in **Splunk SIEM**
 - Triage alerts (L1), build timeline, extract pcap, determine impact (L2)
 - Contain via pfSense block rule; tune Snort rules to reduce false positives
-    
+
+
 ## Detected
 - HTTP query parameters containing SQLi keywords (`UNION SELECT`)
 - Repeated authentication failures from a single source IP (401 spike)
