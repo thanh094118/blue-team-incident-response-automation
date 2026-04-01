@@ -3,7 +3,7 @@ title <size:18>SOC Detection & Incident Response Lab</size>
 
 skinparam shadowing false
 skinparam componentStyle rectangle
-
+sdfsd
 ' Màu sắc dark mode
 skinparam backgroundColor #1E1E1E
 skinparam defaultFontColor #FFFFFF
