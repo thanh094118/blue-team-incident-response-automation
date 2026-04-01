@@ -5,7 +5,7 @@ This document lists the basic Splunk searches used to detect suspicious activiti
 The queries focus on identifying abnormal HTTP behavior and possible brute-force login attempts.
 ascdas  sd
 ---
-
+efs
 ## 1. Detect Suspicious HTTP Requests (SQL Injection Patterns)
 
 Search for common SQL injection patterns in web server logs.
