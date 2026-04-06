@@ -4,7 +4,7 @@ import sys
 import csv
 from collections import defaultdict
 from datetime import datetime
-
+ergfrg
 LOG_PATTERN = re.compile(
     r'(?P<ip>\d{1,3}(?:\.\d{1,3}){3})\ssdfsfdgdfgdf+-\s+(?P<user>[^ ]+)\s+\[(?P<time>[^\]]+)\]\s+"(?P<method>GET|POST|PUT|DELETE|HEAD|OPTIONS)\s+(?P<uri>[^"]+)\s+HTTP/[0-9.]+"\s+(?P<status>\d{3})\s+(?P<size>\d+|-)'
 )
