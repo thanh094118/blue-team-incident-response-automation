@@ -2,7 +2,7 @@
 LOGFILE="${1:-/var/log/apache2/access.log}"
 OUT_IOC="${2:-iocs.txt}"
 TMP="/tmp/iocs.tmp"
-
+asdad
 grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' "$LOGFILE" | sort -u > /tmp/ips.tmp
 awk '{print $1 " " $4 " " $7}' "$LOGFILE" 2>/dev/null | awk '{print $1" "$3}' > /tmp/uri.tmp
 
