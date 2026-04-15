@@ -5,7 +5,7 @@
 This lab simulates common web application attacks against a vulnerable web application environment and demonstrates how security monitoring tools detect and investigate these events.
 
 The objective is to reproduce a simplified SOC workflow:
-
+asdasds
 Attack Traffic → IDS Detection → SIEM Investigation → Incident Analysis  
 asdasd
 ## Lab Environment
