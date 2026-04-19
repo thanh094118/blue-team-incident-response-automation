@@ -4,8 +4,8 @@ This document reconstructs the sequence of events observed during the attack sim
 
 The timeline is based on IDS alerts and web server log analysis.sd
 asdasd
----cádfdsfsdaf
-asdasd
+---
+
 ## Attack Timeline
 
 | Time | Event | Description |
