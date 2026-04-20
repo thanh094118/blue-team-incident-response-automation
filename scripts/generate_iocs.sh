@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bashsdfsf
 LOGFILE="${1:-/var/log/apache2/access.log}"
 OUT_IOC="${2:-iocs.txt}"
 TMP="/tmp/iocs.tmp"
